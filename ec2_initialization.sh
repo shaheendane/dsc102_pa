@@ -1,4 +1,5 @@
 sudo apt update
+sudo apt install awscli
 sudo apt install python3-pip -y
 pip install "dask[complete]" --no-cache-dir
 sudo apt install awscli -y
