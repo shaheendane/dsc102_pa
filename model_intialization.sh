@@ -7,3 +7,4 @@ pip install fsspec
 pip install s3fs
 pip install sklearn
 aws s3 cp s3://ds102-teamaqua-scratch/model.py model.py
+pip3 install --upgrade awscli
