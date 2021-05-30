@@ -7,5 +7,6 @@ testdf = testdf.rdd.map(lambda x: (x['loan_seq_number'], x['delin_status'], x['b
 testdf = testdf.select(["loan_seq_number", "label"])
 import pyspark.sql.functions as F
 testdf = testdf.groupby('loan_seq_number').agg(F.avg("label"))
+testdf = testdf.withColumnRenamed("avg(label)", "label")
 #group by agg part
 testdf.write.format("parquet").mode("overwrite").save("s3://ds102-teamaqua-scratch")
